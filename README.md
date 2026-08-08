@@ -1,32 +1,48 @@
-# React + TypeScript + Vite
+# Panda UI Components
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A React-based UI component library and documentation site built using [Vite](https://vitejs.dev/) and [Panda CSS](https://panda-css.com/).
 
-Currently, two official plugins are available:
+## Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+This project serves as a Proof of Concept (POC) for building and documenting reusable UI components with Panda CSS's atomic utility-first styling engine.
 
-## React Compiler
+### Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- ⚡️ **Fast Development**: Powered by Vite and React.
+- 🎨 **Type-safe Styling**: Zero-runtime CSS-in-JS using Panda CSS.
+- 📚 **Component Documentation**: Built-in pages for showcasing components like Accordion, Alerts, Forms, Grid Layouts, and more.
 
-## Expanding the Oxlint configuration
+## Getting Started
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+### Prerequisites
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
-```
+- Node.js (v18+)
+- npm
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+### Installation
+
+1. Clone the repository and install dependencies:
+   ```bash
+   npm install
+   ```
+
+2. Generate the Panda CSS styling artifacts:
+   ```bash
+   npm run prepare
+   ```
+
+3. Start the development server:
+   ```bash
+   npm run dev
+   ```
+
+## Available Scripts
+
+- `npm run dev`: Starts the Vite development server with Panda CSS codegen watch mode.
+- `npm run build`: Builds the application for production.
+- `npm run lint`: Runs Oxlint to check for code issues.
+- `npm run preview`: Previews the production build locally.
+
+## License
+
+MIT
